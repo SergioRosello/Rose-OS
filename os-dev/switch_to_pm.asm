@@ -1,7 +1,6 @@
 [bits 16]
 ; Switch to protected mode
 switch_to_pm:
-
   cli                     ; We must switch of interrupts until we have
                           ; set-up the protected mode interrupt vector
                           ; otherwise interrupts will run riot.
@@ -10,8 +9,9 @@ switch_to_pm:
                           ; mode segments (e.g. for code and data)
 
   mov eax, cr0            ; To make the switch to protected mode, we set
-  or eax, 0x1             ; the forst bit of CR0, a control register
+  or eax, 0x1             ; the first bit of CR0, a control register
   mov cr0, eax
+
 
   jmp CODE_SEG:init_pm    ; Make a far jump (i.e. to a nre segment) to our 32-bit
                           ; code. This also forces the CPU to flush its cache of
@@ -33,3 +33,4 @@ init_pm:
 
   call BEGIN_PM    ; Finally, call some well-known label
 
+;DEBUG_MSG db "Loaded gdt successfully", 0

@@ -1,0 +1,11 @@
+Changelog:
+
+
+- Fri 17 Jul 2020 01:13:26 PM CEST
+	- Figured it out
+	- There seemes to be a problem with 16-bit print functions. 
+		If I call them, the code crashes. I think it has something to do
+		with the 'ret' function call. It returns to a blank memory address.
+	- The issue is that I have no clue as to how to overcome this problem.
+- Fri 17 Jul 2020 11:05:21 AM CEST
+  - Figuring out how to change from 16-bit real mode to 32-bit protected mode

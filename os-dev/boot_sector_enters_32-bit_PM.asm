@@ -24,8 +24,9 @@ BEGIN_PM:
   jmp $                   ; Hang
 
 ; Global variables
-MSG_REAL_MODE db "Started in 16-bit Real Mode", 0
+MSG_REAL_MODE db "Debug: Started in 16-bit Real Mode", 0
 MSG_PROT_MODE db "Successfully landed in 32-bit Protected Mode", 0
+DEBUG_MSG db "Loaded gdt successfully", 0
 
 ; Bootsector padding
 times 510-($-$$) db 0
