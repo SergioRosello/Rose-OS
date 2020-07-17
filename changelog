@@ -1,6 +1,10 @@
 Changelog:
 
 
+- Fri 17 Jul 2020 03:36:49 PM CEST
+	- Created boot image, error reading disk!
+- Fri 17 Jul 2020 02:27:05 PM CEST
+	- Re-structured project to make development easier and more intuitive
 - Fri 17 Jul 2020 01:13:26 PM CEST
 	- Figured it out
 	- There seemes to be a problem with 16-bit print functions. 
