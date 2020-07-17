@@ -32,4 +32,3 @@ init_pm:
   mov esp, ebp     ; at the top of the free space.
 
   call BEGIN_PM    ; Finally, call some well-known label
-
