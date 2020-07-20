@@ -1,8 +1,17 @@
 Changelog:
 
 
+- Mon 20 Jul 2020 11:50:10 AM CEST
+	- Using Bochs, I have been able to load compiled C Kernel code 
+	- From now on, I think I will be writing C kernel code.
+		No more Assambler
+- Mon 20 Jul 2020 10:28:09 AM CEST
+	- Error reading disk
 - Fri 17 Jul 2020 03:36:49 PM CEST
 	- Created boot image, error reading disk!
+	- Changed from qemu to bochs.
+		- Maybe it's qemu's missconfiguration, but it seems to me otherwise,
+		because bochs behaves similarly.
 - Fri 17 Jul 2020 02:27:05 PM CEST
 	- Re-structured project to make development easier and more intuitive
 - Fri 17 Jul 2020 01:13:26 PM CEST
