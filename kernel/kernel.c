@@ -4,5 +4,5 @@ void main(){
   char *video_memory = (char*) 0xb8000;
   // at the address pointed to by the video_memory, store a character 'X'
   // (i.e. display X on the top-left of the screen)
-  *video_memory = 'X';
+  *video_memory = 'S';
 }

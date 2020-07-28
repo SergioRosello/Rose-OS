@@ -1,6 +1,9 @@
 Changelog:
 
 
+- Tue 28 Jul 2020 11:17:12 PM CEST
+	- Makefile created, not finished
+	- *.c files dont update on Makefile.
 - Mon 20 Jul 2020 11:50:10 AM CEST
 	- Using Bochs, I have been able to load compiled C Kernel code 
 	- From now on, I think I will be writing C kernel code.

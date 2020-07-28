@@ -34,7 +34,7 @@ kernel.bin: kernel/kernel_entry.o ${OBJ}
 %.o : %.c ${HEADERS}
 	gcc -ffreestanding -fno-pie -m32 -c $< -o $@
 
-# Assemble  the  kernel_entry.
+# Assemble the kernel_entry.
 %.o : %.asm
 	nasm $< -f elf -o $@
 
