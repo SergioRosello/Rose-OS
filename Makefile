@@ -26,7 +26,7 @@ os-image: boot/rose-os_boot_sector.bin kernel/kernel.bin
 #   - the kernel_entry, which jumps to main() in our kernel
 #   - the compiled C kernel
 kernel/kernel.bin: boot/kernel_entry.o ${OBJ}
-	ld -m elf_i386 -o $@ -Ttext 0x1000 $^ --oformat binary
+	ld -m elf_i386 -o $@ -Ttext=0x1000 $^ --oformat binary
 
 # Generic  rule  for  compiling C code to an  object  file
 # For  simplicity, we C files  depend  on all  header  files.
