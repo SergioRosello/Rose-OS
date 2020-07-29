@@ -32,7 +32,7 @@
 00000000000i[      ]   Sound support: no
 00000000000i[      ]   USB support: UHCI
 00000000000i[      ]   VGA extension support: vbe
-00000000000i[MEM0  ] allocated memory at 0x7f49d8e4c010. after alignment, vector=0x7f49d8e4d000
+00000000000i[MEM0  ] allocated memory at 0x7fc07bea1010. after alignment, vector=0x7fc07bea2000
 00000000000i[MEM0  ] 32.00MB
 00000000000i[MEM0  ] mem block size = 0x00020000, blocks=256
 00000000000i[MEM0  ] rom at 0xfffe0000/131072 ('/usr/share/bochs/BIOS-bochs-latest')
@@ -43,7 +43,7 @@
 00000000000i[DEV   ] PIIX3 PCI-to-ISA bridge present at device 1, function 0
 00000000000i[PLUGIN] init_dev of 'cmos' plugin device by virtual method
 00000000000i[CMOS  ] Using local time for initial clock
-00000000000i[CMOS  ] Setting initial clock to: Tue Jul 28 23:15:06 2020 (time0=1595970906)
+00000000000i[CMOS  ] Setting initial clock to: Wed Jul 29 11:28:14 2020 (time0=1596014894)
 00000000000i[PLUGIN] init_dev of 'dma' plugin device by virtual method
 00000000000i[DMA   ] channel 4 used by cascade
 00000000000i[PLUGIN] init_dev of 'pic' plugin device by virtual method
@@ -183,76 +183,76 @@
 00000000000i[      ] Using debugger log file ./bochs/debugger.out
 00000000000i[      ] set SIGINT handler to bx_debug_ctrlc_handler
 00000004662i[BIOS  ] $Revision: 13752 $ $Date: 2019-12-30 14:16:18 +0100 (Mon, 30 Dec 2019) $
-00000319068i[KBD   ] reset-disable command received
-00000321807i[BIOS  ] Starting rombios32
-00000322245i[BIOS  ] Shutdown flag 0
-00000322835i[BIOS  ] ram_size=0x02000000
-00000323257i[BIOS  ] ram_end=32MB
-00000363799i[BIOS  ] Found 1 cpu(s)
-00000377451i[BIOS  ] bios_table_addr: 0x000f9db8 end=0x000fcc00
-00000607132i[XGUI  ] charmap update. Font is 9 x 16
-00000705272i[PCI   ] i440FX PMC write to PAM register 59 (TLB Flush)
-00001033202i[P2ISA ] PCI IRQ routing: PIRQA# set to 0x0b
-00001033221i[P2ISA ] PCI IRQ routing: PIRQB# set to 0x09
-00001033240i[P2ISA ] PCI IRQ routing: PIRQC# set to 0x0b
-00001033259i[P2ISA ] PCI IRQ routing: PIRQD# set to 0x09
-00001033269i[P2ISA ] write: ELCR2 = 0x0a
-00001034039i[BIOS  ] PIIX3/PIIX4 init: elcr=00 0a
-00001047711i[BIOS  ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
-00001050024i[BIOS  ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
-00001052176i[BIOS  ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
-00001052411i[PIDE  ] BAR #4: i/o base address = 0xc000
-00001053027i[BIOS  ] region 4: 0x0000c000
-00001055069i[BIOS  ] PCI: bus=0 devfn=0x0a: vendor_id=0x8086 device_id=0x7020 class=0x0c03
-00001055282i[UHCI  ] BAR #4: i/o base address = 0xc020
-00001055898i[BIOS  ] region 4: 0x0000c020
-00001056032i[UHCI  ] new IRQ line = 9
-00001057954i[BIOS  ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
-00001058198i[ACPI  ] new IRQ line = 11
-00001058212i[ACPI  ] new IRQ line = 9
-00001058239i[ACPI  ] new PM base address: 0xb000
-00001058253i[ACPI  ] new SM base address: 0xb100
-00001058281i[PCI   ] setting SMRAM control register to 0x4a
-00001222374i[CPU0  ] Enter to System Management Mode
-00001222384i[CPU0  ] RSM: Resuming from System Management Mode
-00001386405i[PCI   ] setting SMRAM control register to 0x0a
-00001413121i[BIOS  ] MP table addr=0x000f9e90 MPC table addr=0x000f9dc0 size=0xc8
-00001414992i[BIOS  ] SMBIOS table addr=0x000f9ea0
-00001417178i[BIOS  ] ACPI tables: RSDP addr=0x000f9fd0 ACPI DATA addr=0x01ff0000 size=0xff8
-00001420425i[BIOS  ] Firmware waking vector 0x1ff00cc
-00001422905i[PCI   ] i440FX PMC write to PAM register 59 (TLB Flush)
-00001423628i[BIOS  ] bios_table_cur_addr: 0x000f9ff4
-00001552499i[VBIOS ] VGABios $Id: vgabios.c 226 2020-01-02 21:36:23Z vruppert $
-00001552570i[BXVGA ] VBE known Display Interface b0c0
-00001552602i[BXVGA ] VBE known Display Interface b0c5
-00001555245i[VBIOS ] VBE Bios $Id: vbe.c 228 2020-01-02 23:09:02Z vruppert $
-00004452564i[XGUI  ] charmap update. Font is 9 x 16
-00014040190i[BIOS  ] Booting from 0000:7c00
-00014434168i[FLOPPY] partial read() on floppy image returns 56/512
-00014478612i[FLOPPY] read() on floppy image returns 0
-00014523056i[FLOPPY] read() on floppy image returns 0
-00014567500i[FLOPPY] read() on floppy image returns 0
-00014611944i[FLOPPY] read() on floppy image returns 0
-00014656388i[FLOPPY] read() on floppy image returns 0
-00014700832i[FLOPPY] read() on floppy image returns 0
-00936224000p[XGUI  ] >>PANIC<< POWER button turned off.
-00936224000i[CPU0  ] CPU is in protected mode (active)
-00936224000i[CPU0  ] CS.mode = 32 bit
-00936224000i[CPU0  ] SS.mode = 32 bit
-00936224000i[CPU0  ] EFER   = 0x00000000
-00936224000i[CPU0  ] | EAX=000b8000  EBX=00007d77  ECX=00090000  EDX=00000f00
-00936224000i[CPU0  ] | ESP=0008fffc  EBP=00090000  ESI=000e0000  EDI=0000ffac
-00936224000i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af pf cf
-00936224000i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
-00936224000i[CPU0  ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
-00936224000i[CPU0  ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00936224000i[CPU0  ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00936224000i[CPU0  ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00936224000i[CPU0  ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00936224000i[CPU0  ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00936224000i[CPU0  ] | EIP=00007d5b (00007d5b)
-00936224000i[CPU0  ] | CR0=0x60000011 CR2=0x00000000
-00936224000i[CPU0  ] | CR3=0x00000000 CR4=0x00000000
-00936224000i[CMOS  ] Last time is 1595971140 (Tue Jul 28 23:19:00 2020)
-00936224000i[XGUI  ] Exit
-00936224000i[SIM   ] quit_sim called with exit code 1
+00000320071i[KBD   ] reset-disable command received
+00000322810i[BIOS  ] Starting rombios32
+00000323248i[BIOS  ] Shutdown flag 0
+00000323838i[BIOS  ] ram_size=0x02000000
+00000324260i[BIOS  ] ram_end=32MB
+00000364820i[BIOS  ] Found 1 cpu(s)
+00000378472i[BIOS  ] bios_table_addr: 0x000f9db8 end=0x000fcc00
+00000608372i[XGUI  ] charmap update. Font is 9 x 16
+00000706293i[PCI   ] i440FX PMC write to PAM register 59 (TLB Flush)
+00001034223i[P2ISA ] PCI IRQ routing: PIRQA# set to 0x0b
+00001034242i[P2ISA ] PCI IRQ routing: PIRQB# set to 0x09
+00001034261i[P2ISA ] PCI IRQ routing: PIRQC# set to 0x0b
+00001034280i[P2ISA ] PCI IRQ routing: PIRQD# set to 0x09
+00001034290i[P2ISA ] write: ELCR2 = 0x0a
+00001035060i[BIOS  ] PIIX3/PIIX4 init: elcr=00 0a
+00001048732i[BIOS  ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+00001051045i[BIOS  ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+00001053197i[BIOS  ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+00001053432i[PIDE  ] BAR #4: i/o base address = 0xc000
+00001054048i[BIOS  ] region 4: 0x0000c000
+00001056090i[BIOS  ] PCI: bus=0 devfn=0x0a: vendor_id=0x8086 device_id=0x7020 class=0x0c03
+00001056303i[UHCI  ] BAR #4: i/o base address = 0xc020
+00001056919i[BIOS  ] region 4: 0x0000c020
+00001057053i[UHCI  ] new IRQ line = 9
+00001058975i[BIOS  ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+00001059219i[ACPI  ] new IRQ line = 11
+00001059233i[ACPI  ] new IRQ line = 9
+00001059260i[ACPI  ] new PM base address: 0xb000
+00001059274i[ACPI  ] new SM base address: 0xb100
+00001059302i[PCI   ] setting SMRAM control register to 0x4a
+00001223395i[CPU0  ] Enter to System Management Mode
+00001223405i[CPU0  ] RSM: Resuming from System Management Mode
+00001387426i[PCI   ] setting SMRAM control register to 0x0a
+00001414142i[BIOS  ] MP table addr=0x000f9e90 MPC table addr=0x000f9dc0 size=0xc8
+00001416013i[BIOS  ] SMBIOS table addr=0x000f9ea0
+00001418199i[BIOS  ] ACPI tables: RSDP addr=0x000f9fd0 ACPI DATA addr=0x01ff0000 size=0xff8
+00001421446i[BIOS  ] Firmware waking vector 0x1ff00cc
+00001423926i[PCI   ] i440FX PMC write to PAM register 59 (TLB Flush)
+00001424649i[BIOS  ] bios_table_cur_addr: 0x000f9ff4
+00001553520i[VBIOS ] VGABios $Id: vgabios.c 226 2020-01-02 21:36:23Z vruppert $
+00001553591i[BXVGA ] VBE known Display Interface b0c0
+00001553623i[BXVGA ] VBE known Display Interface b0c5
+00001556266i[VBIOS ] VBE Bios $Id: vbe.c 228 2020-01-02 23:09:02Z vruppert $
+00002487728i[XGUI  ] charmap update. Font is 9 x 16
+00014040191i[BIOS  ] Booting from 0000:7c00
+00014434169i[FLOPPY] partial read() on floppy image returns 56/512
+00014478613i[FLOPPY] read() on floppy image returns 0
+00014523057i[FLOPPY] read() on floppy image returns 0
+00014567501i[FLOPPY] read() on floppy image returns 0
+00014611945i[FLOPPY] read() on floppy image returns 0
+00014656389i[FLOPPY] read() on floppy image returns 0
+00014700833i[FLOPPY] read() on floppy image returns 0
+00242652000p[XGUI  ] >>PANIC<< POWER button turned off.
+00242652000i[CPU0  ] CPU is in protected mode (active)
+00242652000i[CPU0  ] CS.mode = 32 bit
+00242652000i[CPU0  ] SS.mode = 32 bit
+00242652000i[CPU0  ] EFER   = 0x00000000
+00242652000i[CPU0  ] | EAX=000b8000  EBX=00007d77  ECX=00090000  EDX=00000f00
+00242652000i[CPU0  ] | ESP=0008fff8  EBP=00090000  ESI=000e0000  EDI=0000ffac
+00242652000i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af pf cf
+00242652000i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
+00242652000i[CPU0  ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
+00242652000i[CPU0  ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00242652000i[CPU0  ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00242652000i[CPU0  ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00242652000i[CPU0  ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00242652000i[CPU0  ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00242652000i[CPU0  ] | EIP=00001005 (00001005)
+00242652000i[CPU0  ] | CR0=0x60000011 CR2=0x00000000
+00242652000i[CPU0  ] | CR3=0x00000000 CR4=0x00000000
+00242652000i[CMOS  ] Last time is 1596014954 (Wed Jul 29 11:29:14 2020)
+00242652000i[XGUI  ] Exit
+00242652000i[SIM   ] quit_sim called with exit code 1
