@@ -1,6 +1,9 @@
 Changelog:
 
 
+- Thu 30 Jul 2020 02:13:52 PM CEST
+	- Created Screen methods to draw a character in screen
+	- Needs compiling and testing
 - Tue 28 Jul 2020 11:17:12 PM CEST
 	- Makefile created, not finished
 	- *.c files dont update on Makefile.
