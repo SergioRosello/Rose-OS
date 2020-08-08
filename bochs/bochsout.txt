@@ -32,7 +32,7 @@
 00000000000i[      ]   Sound support: no
 00000000000i[      ]   USB support: UHCI
 00000000000i[      ]   VGA extension support: vbe
-00000000000i[MEM0  ] allocated memory at 0x7fe6b003c010. after alignment, vector=0x7fe6b003d000
+00000000000i[MEM0  ] allocated memory at 0x7f884cf77010. after alignment, vector=0x7f884cf78000
 00000000000i[MEM0  ] 32.00MB
 00000000000i[MEM0  ] mem block size = 0x00020000, blocks=256
 00000000000i[MEM0  ] rom at 0xfffe0000/131072 ('/usr/share/bochs/BIOS-bochs-latest')
@@ -43,7 +43,7 @@
 00000000000i[DEV   ] PIIX3 PCI-to-ISA bridge present at device 1, function 0
 00000000000i[PLUGIN] init_dev of 'cmos' plugin device by virtual method
 00000000000i[CMOS  ] Using local time for initial clock
-00000000000i[CMOS  ] Setting initial clock to: Wed Jul 29 18:13:27 2020 (time0=1596039207)
+00000000000i[CMOS  ] Setting initial clock to: Sat Aug  8 13:41:27 2020 (time0=1596886887)
 00000000000i[PLUGIN] init_dev of 'dma' plugin device by virtual method
 00000000000i[DMA   ] channel 4 used by cascade
 00000000000i[PLUGIN] init_dev of 'pic' plugin device by virtual method
@@ -190,7 +190,7 @@
 00000324260i[BIOS  ] ram_end=32MB
 00000364820i[BIOS  ] Found 1 cpu(s)
 00000378472i[BIOS  ] bios_table_addr: 0x000f9db8 end=0x000fcc00
-00000611824i[XGUI  ] charmap update. Font is 9 x 16
+00000609472i[XGUI  ] charmap update. Font is 9 x 16
 00000706293i[PCI   ] i440FX PMC write to PAM register 59 (TLB Flush)
 00001034223i[P2ISA ] PCI IRQ routing: PIRQA# set to 0x0b
 00001034242i[P2ISA ] PCI IRQ routing: PIRQB# set to 0x09
@@ -226,33 +226,30 @@
 00001553591i[BXVGA ] VBE known Display Interface b0c0
 00001553623i[BXVGA ] VBE known Display Interface b0c5
 00001556266i[VBIOS ] VBE Bios $Id: vbe.c 228 2020-01-02 23:09:02Z vruppert $
-00003064472i[XGUI  ] charmap update. Font is 9 x 16
+00002348812i[XGUI  ] charmap update. Font is 9 x 16
 00014040191i[BIOS  ] Booting from 0000:7c00
-00014434169i[FLOPPY] partial read() on floppy image returns 56/512
-00014478613i[FLOPPY] read() on floppy image returns 0
-00014523057i[FLOPPY] read() on floppy image returns 0
-00014567501i[FLOPPY] read() on floppy image returns 0
+00014567501i[FLOPPY] partial read() on floppy image returns 488/512
 00014611945i[FLOPPY] read() on floppy image returns 0
 00014656389i[FLOPPY] read() on floppy image returns 0
 00014700833i[FLOPPY] read() on floppy image returns 0
-00721956000p[XGUI  ] >>PANIC<< POWER button turned off.
-00721956000i[CPU0  ] CPU is in protected mode (active)
-00721956000i[CPU0  ] CS.mode = 32 bit
-00721956000i[CPU0  ] SS.mode = 32 bit
-00721956000i[CPU0  ] EFER   = 0x00000000
-00721956000i[CPU0  ] | EAX=000b8000  EBX=00007d77  ECX=00090000  EDX=00000f00
-00721956000i[CPU0  ] | ESP=0008fff8  EBP=00090000  ESI=000e0000  EDI=0000ffac
-00721956000i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af pf cf
-00721956000i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
-00721956000i[CPU0  ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
-00721956000i[CPU0  ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00721956000i[CPU0  ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00721956000i[CPU0  ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00721956000i[CPU0  ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00721956000i[CPU0  ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00721956000i[CPU0  ] | EIP=00001005 (00001005)
-00721956000i[CPU0  ] | CR0=0x60000011 CR2=0x00000000
-00721956000i[CPU0  ] | CR3=0x00000000 CR4=0x00000000
-00721956000i[CMOS  ] Last time is 1596039387 (Wed Jul 29 18:16:27 2020)
-00721956000i[XGUI  ] Exit
-00721956000i[SIM   ] quit_sim called with exit code 1
+02683624000p[XGUI  ] >>PANIC<< POWER button turned off.
+02683624000i[CPU0  ] CPU is in protected mode (active)
+02683624000i[CPU0  ] CS.mode = 32 bit
+02683624000i[CPU0  ] SS.mode = 32 bit
+02683624000i[CPU0  ] EFER   = 0x00000000
+02683624000i[CPU0  ] | EAX=00000000  EBX=00007d77  ECX=0008fff8  EDX=000005d6
+02683624000i[CPU0  ] | ESP=0008fff8  EBP=00090000  ESI=000e0000  EDI=0000ffac
+02683624000i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af pf cf
+02683624000i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
+02683624000i[CPU0  ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
+02683624000i[CPU0  ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+02683624000i[CPU0  ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+02683624000i[CPU0  ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+02683624000i[CPU0  ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+02683624000i[CPU0  ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+02683624000i[CPU0  ] | EIP=00001005 (00001005)
+02683624000i[CPU0  ] | CR0=0x60000011 CR2=0x00000000
+02683624000i[CPU0  ] | CR3=0x00000000 CR4=0x00000000
+02683624000i[CMOS  ] Last time is 1596887557 (Sat Aug  8 13:52:37 2020)
+02683624000i[XGUI  ] Exit
+02683624000i[SIM   ] quit_sim called with exit code 1
