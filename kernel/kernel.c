@@ -1,8 +1,7 @@
+#include "../drivers/screen.h"
+
 void main(){
-  // Create a pointer to a char and point it to the first text cell of
-  // video memory (i.e. the top-left of the screen)
-  char *video_memory = (char*) 0xb8000;
-  // at the address pointed to by the video_memory, store a character 'X'
-  // (i.e. display X on the top-left of the screen)
-  *video_memory = 'X';
+  // With this meesage, what I am trying to acheve is to debug method handle_scrolling.
+  char* message = "Buenas, este que sea el primer mensaje, tan largo que llega al final de la pantalla y sigue recto -- Buenas, este que sea el primer mensaje, tan largo que llega al final de la pantalla y sigue recto -- Buenas, este que sea el primer mensaje, tan largo que llega al final de la pantalla y sigue recto -- Buenas, este que sea el primer mensaje, tan largo que llega al final de la pantalla y sigue recto -- Buenas, este es un mensaje tan largo que llega al final de la pantalla y sigue recto";
+  print(message);
 }

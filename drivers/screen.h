@@ -11,7 +11,8 @@
 void print(char*);
 void print_at(char*, int, int);
 void print_char( char, int, int, char);
-int handle_scrolling(int);
+int handle_scrolling(unsigned char*, int);
+void clearLastRow(unsigned char*);
 int get_screen_offset(int, int);
 int get_cursor();
 void set_cursor(int);

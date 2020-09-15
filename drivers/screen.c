@@ -1,4 +1,5 @@
 #include "../kernel/low_level.h"
+#include "../kernel/util.h"
 #include "screen.h"
 
 void print(char* message){
@@ -39,7 +40,7 @@ void print_char(char character, int col, int row, char attribute_byte) {
     // Place offset at the last location of the row.
     // TODO: Check if this location is correct.
     // shouldnt it be 159?
-    offset = get_screen_offset(79, rows);
+    offset = get_screen_offset(rows, 79);
     // Otherwise, write the character and its attribute byte to the
     // video memory at our calculated offset.
   } else {
@@ -47,19 +48,42 @@ void print_char(char character, int col, int row, char attribute_byte) {
     vidmem[offset+1] = attribute_byte;
   }
 
+  //int tmpOffset = get_screen_offset(MAX_ROWS-1, MAX_COLS-1);
+  //vidmem[tmpOffset] = '*';
+  //vidmem[tmpOffset+1] = attribute_byte;
   // Update the offset to the next character cell, which is
   // two bytes ahead of the current cell.
   offset += 2;
   // Make scrolling adjustment, for when we reach the bottom
   // of the screen.
-  offset = handle_scrolling(offset);
+  offset = handle_scrolling(vidmem, offset);
   // Update the cursor position on the screen device.
   set_cursor(offset);
 }
 
-//TODO: Finish method
-int handle_scrolling(int offset){
-  return 1;
+void clearLastRow(unsigned char* vidmem){
+    int lastRowOffset = get_screen_offset(MAX_ROWS-1, 0);
+    for(int i = 0; i < (2*MAX_COLS); ++i){
+      vidmem[lastRowOffset+i] = ' ';
+      ++i;
+      vidmem[lastRowOffset+i] = WHITE_ON_BLACK;
+    }
+}
+
+int handle_scrolling(unsigned char* vidmem, int offset){
+  // if offset has reached the end of the buffer, copy the contents of the buffer to the previous row.
+  if (offset == get_screen_offset(MAX_ROWS-1, MAX_COLS-1)) {
+    for (int i = 0; i < MAX_ROWS-1; ++i) {
+      memory_copy(&vidmem[get_screen_offset(i+1, 0)],
+                  &vidmem[get_screen_offset(i, 0)],
+                  sizeof(char) * (2*MAX_COLS));
+    }
+    // Clear the last row of data
+    clearLastRow(vidmem);
+    // Reset the offset to the last location
+    offset = get_screen_offset(MAX_ROWS-2, MAX_COLS-1);
+  }
+  return offset;
 }
 
 int get_screen_offset(int row, int col){
