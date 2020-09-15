@@ -42,5 +42,5 @@ kernel/kernel.bin: boot/kernel_entry.o ${OBJ}
 
 clean:
 	rm -fr *.bin *.dis *.o os-image
-	rm -fr  kernel/*.o kernel/*.bin boot/*.bin  drivers/
+	rm -fr  kernel/*.o kernel/*.bin book/kernel_entry.o boot/*.bin drivers/screen.o
 

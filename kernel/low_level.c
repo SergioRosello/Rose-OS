@@ -1,3 +1,5 @@
+#ifndef LOW_LEVEL_H
+#define LOW_LEVEL_H
 unsigned char port_byte_in(unsigned short port){
   // C wrapper function that reads a byte from the specified port
   // "=a" (result) means: Put AL register in variable result when finished
@@ -24,3 +26,4 @@ void port_word_out(unsigned short port, unsigned char data){
   __asm__("out %%ax, %%dx" : : "a" (data), "d" (port));
 }
 
+#endif 

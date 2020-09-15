@@ -1,4 +1,5 @@
 work
 out
 .ccls-cache/
+bochs/*
 *.vim
