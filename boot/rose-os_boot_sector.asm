@@ -23,6 +23,7 @@ KERNEL_OFFSET equ 0x1000 ; The memory offset to which we will load the kernel
 %include "boot/gdt.asm"
 %include "boot/print_string_pm.asm"
 %include "boot/switch_to_pm.asm"   
+; %include "boot/irq.asm"   
 
 [bits 16]
 

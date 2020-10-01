@@ -1,11 +1,14 @@
 #include "low_level.h"
+#include "../drivers/keyboard.h"
+// For debugging purposes
+#include "../drivers/screen.h"
 
 void irq0_handler(void) {
   port_byte_out(0x20, 0x20); //EOI
 }
 
 void irq1_handler(void) {
-  //TODO: Call keyboard driver, to get the key pressed
+  keyborad_handler();
   port_byte_out(0x20, 0x20); //EOI
 }
 

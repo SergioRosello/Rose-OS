@@ -1,5 +1,9 @@
 Changelog:
-
+- 2020-10-01 12:14
+	- Interrupts work, Keyboard driver works, and screen driver updated, to work
+	better. (Also, everything is working just barely)
+- 2020-09-30 11:44
+	- Interrupts work, but I cannot get the keyboard driver to work.
 - 2020-09-15 14:38
 	- Display driver finished.
 	- Now it scrolls and wraps over the screen
@@ -29,4 +33,4 @@ Changelog:
 		with the 'ret' function call. It returns to a blank memory address.
 	- The issue is that I have no clue as to how to overcome this problem.
 - Fri 17 Jul 2020 11:05:21 AM CEST
-  - Figuring out how to change from 16-bit real mode to 32-bit protected mode
+	- Figuring out how to change from 16-bit real mode to 32-bit protected mode

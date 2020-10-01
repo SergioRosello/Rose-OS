@@ -9,6 +9,7 @@
 #define REG_SCREEN_DATA 0x3D5
 
 void print(char*);
+void print_c(char);
 void print_at(char*, int, int);
 void print_char( char, int, int, char);
 int handle_scrolling(unsigned char*, int);

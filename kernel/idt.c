@@ -212,6 +212,5 @@ void idt_init(void) {
   // Call the asm-defined function that loads the IDT
   // Defined in boot/irq.asm
   load_idt(idt_ptr);
-
 }
 

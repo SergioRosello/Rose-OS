@@ -25,7 +25,7 @@ os-image: boot/rose-os_boot_sector.bin kernel/kernel.bin
 # This  builds  the  binary  of our  kernel  from  two  object  files:
 #   - the kernel_entry, which jumps to main() in our kernel
 #   - the compiled C kernel
-kernel/kernel.bin: boot/kernel_entry.o ${OBJ}
+kernel/kernel.bin: boot/kernel_entry.o boot/irq.o ${OBJ}
 	ld -m elf_i386 -o $@ -Ttext=0x1000 $^ --oformat binary
 
 # Generic  rule  for  compiling C code to an  object  file
@@ -35,12 +35,12 @@ kernel/kernel.bin: boot/kernel_entry.o ${OBJ}
 
 # Assemble the kernel_entry.
 %.o : %.asm
-	nasm $< -f elf -o $@
+	nasm -f elf32 -g -F dwarf $< -o $@
 
 %.bin : %.asm
 	nasm $< -f bin -I  ’./boot/’ -o $@
 
 clean:
 	rm -fr *.bin *.dis *.o os-image
-	rm -fr  kernel/*.o kernel/*.bin book/kernel_entry.o boot/*.bin drivers/screen.o
+	rm -fr  kernel/*.o kernel/*.bin boot/*.o boot/*.bin drivers/*.o
 

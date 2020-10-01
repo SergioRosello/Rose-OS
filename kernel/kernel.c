@@ -1,10 +1,11 @@
 #include "../drivers/screen.h"
+#include "idt.h"
 
 void main(){
-  // TODO: I will have to load our IDT table, so we can use interrupts.
-  //idt_load();
-  
+  // Load Interrupts
+  idt_init();
   // With this meesage, what I am trying to acheve is to debug method handle_scrolling.
-  char* message = "Buenas, este que sea el primer mensaje, tan largo que llega al final de la pantalla y sigue recto -- Buenas, este que sea el primer mensaje, tan largo que llega al final de la pantalla y sigue recto -- Buenas, este que sea el primer mensaje, tan largo que llega al final de la pantalla y sigue recto -- Buenas, este que sea el primer mensaje, tan largo que llega al final de la pantalla y sigue recto -- Buenas, este es un mensaje tan largo que llega al final de la pantalla y sigue recto";
-  print(message);
+  print("Welcome to Rose-OS\n");
+  // Check weather interrupts are in place or not
+  while(1){}
 }

@@ -2,6 +2,10 @@
 #include "../kernel/util.h"
 #include "screen.h"
 
+void print_c(char symbol){
+  print_char(symbol, -1, -1, WHITE_ON_BLACK);
+}
+
 void print(char* message){
   print_at(message, -1, -1);
 }
@@ -38,27 +42,26 @@ void print_char(char character, int col, int row, char attribute_byte) {
     // 2 * MAX_COLS because each character also has a style byte.
     int rows = offset / (2*MAX_COLS);
     // Place offset at the last location of the row.
-    // TODO: Check if this location is correct.
-    // shouldnt it be 159?
     offset = get_screen_offset(rows, 79);
     // Otherwise, write the character and its attribute byte to the
     // video memory at our calculated offset.
-  } else {
+    offset = handle_scrolling(vidmem, offset);
+    offset += 2;
+  } else if (character == '\b') {
+    // Clear memory from character before and position the cursor one character before
+    offset = get_cursor();
+    if(offset >= 2){
+      offset -= 2;
+    }
+    vidmem[offset] = ' ';
+    vidmem[offset+1] = attribute_byte;
+  }else{
     vidmem[offset] = character;
     vidmem[offset+1] = attribute_byte;
+    offset = handle_scrolling(vidmem, offset);
+    offset += 2;
   }
-
-  //int tmpOffset = get_screen_offset(MAX_ROWS-1, MAX_COLS-1);
-  //vidmem[tmpOffset] = '*';
-  //vidmem[tmpOffset+1] = attribute_byte;
-  // Update the offset to the next character cell, which is
-  // two bytes ahead of the current cell.
-  offset += 2;
-  // Make scrolling adjustment, for when we reach the bottom
-  // of the screen.
-  offset = handle_scrolling(vidmem, offset);
-  // Update the cursor position on the screen device.
-  set_cursor(offset);
+    set_cursor(offset);
 }
 
 void clearLastRow(unsigned char* vidmem){
